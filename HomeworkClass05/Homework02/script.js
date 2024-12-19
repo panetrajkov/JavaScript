@@ -9,10 +9,10 @@ const book = {
   readingStatus: false,
   bookFunction: function () {
     if (this.readingStatus === true) {
-      console.log("Already read 'The Robots of dawn' by Isaac Asimov");
+      console.log(`Already read '${this.title}' by ${this.author}`);
     } else {
       console.log(
-        "You still need to read 'Mockingjay: The Final Book of TheHunger Games' by Suzanne Collins."
+        `You still need to read '${bookTwo.title}' by ${bookTwo.author}.`
       );
     }
   },
@@ -20,15 +20,20 @@ const book = {
   input: function () {
     promptValue = prompt(`Have you read ${this.title}?\nAnswer with Yes/No`);
     if (promptValue === "yes") {
-      console.log(`Already read '${this.title} by Isaac Asimov`);
+      console.log(`Already read '${this.title} by ${this.author}`);
     } else if (promptValue === "no") {
       console.log(
-        "You still need to read 'Mockingjay: The Final Book of TheHunger Games' by Suzanne Collins."
+        `You still need to read '${bookTwo.title}' by ${bookTwo.author}.`
       );
     } else {
       console.log("Incorrect input");
     }
   },
+};
+
+const bookTwo = {
+  title: "Mockingjay: The Final Book of The Hunger Games",
+  author: "Suzanne Collins",
 };
 
 book.bookFunction();
