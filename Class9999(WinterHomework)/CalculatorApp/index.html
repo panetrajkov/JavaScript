@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App</title>
+  </head>
+  <body>
+    <h1>Calculator Application</h1>
+
+    <style>
+      table {
+        border: 5px solid black;
+        width: 350px;
+        height: 350px;
+        font-size: 20px;
+        border-spacing: 10px;
+        text-align: center;
+        background-color: #fffdd0;
+      }
+      th,
+      td {
+        border: 2px solid black;
+        text-align: center;
+        width: 25%;
+      }
+      td[colspan="2"] {
+        width: 50%;
+      }
+      #calculation {
+        width: 70;
+        height: 50px;
+      }
+    </style>
+
+    <table>
+      <tr>
+        <th colspan="4" style="background-color: #d9d9d9" id="calculation">
+          0
+        </th>
+      </tr>
+      <tr>
+        <th
+          colspan="2"
+          style="background-color: #d9d9d9"
+          onclick="clearDisplay()"
+        >
+          C
+        </th>
+        <th style="background-color: #d9d9d9" class="backspace-key">⬅️</th>
+        <th style="background-color: #de984c" class="operator-key">/</th>
+      </tr>
+      <tr>
+        <td style="background-color: #d9d9d9" class="numeric-key">7</td>
+        <td style="background-color: #d9d9d9" class="numeric-key">8</td>
+        <td style="background-color: #d9d9d9" class="numeric-key">9</td>
+        <td style="background-color: #de984c" class="operator-key">*</td>
+      </tr>
+
+      <tr>
+        <td style="background-color: #d9d9d9" class="numeric-key">4</td>
+        <td style="background-color: #d9d9d9" class="numeric-key">5</td>
+        <td style="background-color: #d9d9d9" class="numeric-key">6</td>
+        <td style="background-color: #de984c" class="operator-key">-</td>
+      </tr>
+
+      <tr>
+        <td style="background-color: #d9d9d9" class="numeric-key">1</td>
+        <td style="background-color: #d9d9d9" class="numeric-key">2</td>
+        <td style="background-color: #d9d9d9" class="numeric-key">3</td>
+        <td style="background-color: #de984c" class="operator-key">+</td>
+      </tr>
+
+      <tr>
+        <td style="background-color: #d9d9d9" class="numeric-key">.</td>
+        <td colspan="2" style="background-color: #d9d9d9" class="numeric-key">
+          0
+        </td>
+        <td style="background-color: #de984c" id="equals">🟰</td>
+      </tr>
+    </table>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
